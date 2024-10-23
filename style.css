@@ -17,8 +17,14 @@ body {
 
   font-size: 12px;
 }
+
 .player-container{
   height:500px;
+  width:400px;
+  background:#e7e7e7;
+  border-radius: 20px;
+  box-shadow:0 15px 30px 5px rgba(0,0,0,0.3);
+
 }
 
 
@@ -28,6 +34,16 @@ body {
   position: relative;
   top: -50px;
   left: 50px;
+  height:300px;
+  width:300px;
+  
+}
+.img-container img{
+  height:100%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 20px;
+  box-shadow: 0 5px 30px 5px rgba(0,0,0,0.5);
 }
 
 
@@ -82,7 +98,13 @@ h3 {
   font-size: 30px;
   color: rgb(129, 129, 129);
   margin-right: 30px;
+  cursor: pointer;
+  user-select: none;
 
+}
+
+.fas:HOVER{
+  filter: brightness(80%);
 }
 
 
@@ -95,6 +117,9 @@ h3 {
 
 /* Media Query: iPhone (Vertical) */
 @media screen and (max-width: 376px) {
+  .player-container{
+    width:95vw;
+  }
 
 
   .img-container {
