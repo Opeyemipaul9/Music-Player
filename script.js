@@ -4,7 +4,7 @@ const artist = document.getElementById('artist');
 const music = document.querySelector('audio');
 const progressContainer = document.getElementById('progress-container');
 const progress  = document.getElementById('progress');
-const currentTimeEl =document.getElementById('current-time');
+const currentTimeEl = document.getElementById('current-time');
 const durationEl = document.getElementById('duration');
 const prevBtn = document.getElementById('prev');
 const playBtn = document.getElementById('play');
@@ -96,6 +96,7 @@ function updateProgressBar(e){
     
     if(isPlaying){
         const {duration,currentTime} = e.srcElement;
+
         // Update Progress Bar width
         const progressPercent = (currentTime / duration) * 100;
         progress.style.width = `${progressPercent}%`; 
@@ -126,16 +127,10 @@ function updateProgressBar(e){
 // Set Progress Bar
 function setProgressBar(e){
     const width = this.clientWidth;
-    const clickX=e.offsetX;
+    const clickX = e.offsetX;
     const {duration} = music;
-    music.currentTime = (clickX/width) * duration;
-    
-    
-    
+    music.currentTime = (clickX/width) * duration; 
 }
-
-
-
 
 
 // Play and Pause Event Listener
