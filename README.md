@@ -1,6 +1,6 @@
 # MUSIC PLAYER 
 Main Functionality
--Ability to Play next Music when the current one ends
+- Ability to Play next Music when the current one ends
 - Progress Bar Visible with (with current time and Duration)
 - Play and Pause Function
 - Ability to play Previous and Next the Song
