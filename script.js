@@ -9,8 +9,13 @@ const durationEl = document.getElementById('duration');
 const prevBtn = document.getElementById('prev');
 const playBtn = document.getElementById('play');
 const nextBtn = document.getElementById('next');
+const shuffleBtn = document.getElementById('shuffle');
+const likeBtn = document.getElementById('liked');
+
 
 let isPlaying = false;
+let songIndex = 0;
+likedMusic = [];
 
 // Music 
 const songs =[
@@ -65,18 +70,30 @@ function pauseSong(){
     music.pause();
 }
 
+// Liked Music
+function likedMusic(){
+    likeBtn.style.background = 'red';
+    console.log('james');
+
+}
 
 // Update Dom
 
 function loadSong(song){
     title.textContent = song.display;
-    artist.textContent= song.artist;
+    artist.textContent = song.artist;
     music.src = `music/${song.name}.mp3`;
     image.src = `img/${song.image}.jpg`;
     
 }
 
-let songIndex = 0;
+// shuffle song
+function shuffleSong(){
+    loadSong(songs[Math.floor(Math.random()* songs.length)])
+    playSong();
+    console.log('james');
+
+}
 
 function prevSong(){
     songIndex--;
@@ -152,3 +169,5 @@ nextBtn.addEventListener('click', nextSong);
 music.addEventListener('timeupdate',updateProgressBar);
 music.addEventListener('ended', nextSong);
 progressContainer.addEventListener('click', setProgressBar);
+shuffleBtn.addEventListener('click', shuffleSong);
+likeBtn.addEventListener('click', likedMusic);
