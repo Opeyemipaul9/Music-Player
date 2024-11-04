@@ -15,27 +15,37 @@ let isPlaying = false;
 // Music 
 const songs =[
     {
-        name:'jacinto-1',
-        display:'Electric Chill machine',
-        artist: 'Jacinto Design'
+        name:'Brent',
+        display:'Been Away',
+        artist: 'Brent Faiyaz',
+        image: 'away'
          
     },
     {
-        name: 'jacinto-2',
-        display: 'Seven Nation Army (Remix)',
-        artist: 'Jacinto Design'
+        name: 'Drake',
+        display: 'Slime you Out',
+        artist: 'Drake ft Sza',
+        image: 'Drake'
 
     },
     {
-        name: 'jacinto-3',
-        display: 'Goodnight, Disco Queen',
-        artist: ' Jacinto Design'
+        name: 'J cole',
+        display: 'Port Antonio',
+        artist: 'J cole',
+        image: 'jcole'
     },
     {
-        name: 'metric-1',
-        display: 'Front Row (Remix)',
-        artist:'Metric / Jacinto Design'
-    } 
+        name: 'Jhene',
+        display: 'The Worst',
+        artist:'Jhene Aiko',
+        image: 'jhene',
+    }, 
+    {
+        name: 'Wizkid',
+        display: 'Piece of my Heart',
+        artist : 'Wizkid ft Brent Faiyaz',
+        image: 'wizkid'
+    }
 
 ]
 
@@ -62,7 +72,7 @@ function loadSong(song){
     title.textContent = song.display;
     artist.textContent= song.artist;
     music.src = `music/${song.name}.mp3`;
-    image.src = `img/${song.name}.jpg`;
+    image.src = `img/${song.image}.jpg`;
     
 }
 
