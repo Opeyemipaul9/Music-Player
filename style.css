@@ -90,8 +90,8 @@ h3 {
 .player-controls {
   position: relative;
   top: -15px;
-  left: 120px;
-  width: 200px;
+  left: 60px;
+  width: 350px;
 }
 
 .fas {
@@ -101,6 +101,14 @@ h3 {
   cursor: pointer;
   user-select: none;
 
+}
+
+.fa-solid{
+  font-size: 30px;
+  color: rgb(129, 129, 129);
+  margin-right: 30px;
+  cursor: pointer;
+  user-select: none;
 }
 
 .fas:HOVER{
