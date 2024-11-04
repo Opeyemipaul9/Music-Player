@@ -15,7 +15,7 @@ const likeBtn = document.getElementById('liked');
 
 let isPlaying = false;
 let songIndex = 0;
-likedMusic = [];
+
 
 // Music 
 const songs =[
@@ -70,13 +70,6 @@ function pauseSong(){
     music.pause();
 }
 
-// Liked Music
-function likedMusic(){
-    likeBtn.style.background = 'red';
-    console.log('james');
-
-}
-
 // Update Dom
 
 function loadSong(song){
@@ -91,8 +84,6 @@ function loadSong(song){
 function shuffleSong(){
     loadSong(songs[Math.floor(Math.random()* songs.length)])
     playSong();
-    console.log('james');
-
 }
 
 function prevSong(){
@@ -115,19 +106,18 @@ function nextSong(){
     
 }
 
-// OnLoad- Select first Song
-loadSong(songs[songIndex]);
+
 
 // Update Progress Bar & Time
 function updateProgressBar(e){
     
     if(isPlaying){
         const {duration,currentTime} = e.srcElement;
-
+        
         // Update Progress Bar width
         const progressPercent = (currentTime / duration) * 100;
         progress.style.width = `${progressPercent}%`; 
-
+        
         // calculate display for duration
         const durationMinutes = Math.floor(duration / 60);
         
@@ -159,6 +149,9 @@ function setProgressBar(e){
     music.currentTime = (clickX/width) * duration; 
 }
 
+
+// OnLoad- Select first Song
+loadSong(songs[songIndex]);
 
 // Play and Pause Event Listener
 playBtn.addEventListener('click', () => (isPlaying ? pauseSong() : playSong()));
